@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Starfield Background Canvas -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-pixel">~/portfolio</span>
+      </div>
+      <nav class="nav" id="mainNav">
+        <button class="nav-btn active" data-tab="resume">Resume</button>
+        <button class="nav-btn" data-tab="experience">Experience</button>
+        <button class="nav-btn" data-tab="projects">Projects</button>
+      </nav>
+    </header>
+
+    <!-- CONTENT AREA -->
+    <main class="content">
+
+      <!-- ===== TAB: RESUME / LANDING ===== -->
+      <section id="tab-resume" class="tab-content active">
+        <div class="hero">
+          <p class="hero-intro">Hello, I'm</p>
+          <h1 class="hero-title" id="heroTitle"></h1>
+          <p class="hero-subtitle" id="heroSubtitle"></p>
+          <div class="hero-cta">
+            <a href="#experience" class="btn btn-primary" data-nav="experience">View Experience →</a>
+            <a href="#projects" class="btn btn-secondary" data-nav="projects">See Projects →</a>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <div class="section-title">
+            <h2>Contact</h2>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <span class="contact-icon">@</span>
+              <span>vanjeluk@gmail.com</span>
+            </div>
+            <a href="https://github.com/lvanjelg" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-icon">🌐</span>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/luke-van-jelgerhuis/" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-icon">🔗</span>
+              <span>LinkedIn</span>
+            </a>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <span>Bloomington, IN</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <div class="section-title">
+            <h2>Skills</h2>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Languages</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">Java</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Frameworks</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">PyTorch</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Tools</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">K8s</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <div class="section-title">
+            <h2>Education</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2026 — Present</span>
+                <h3>M.S. Data Science</h3>
+                <p>Indiana University</p>
+                <p class="timeline-desc">Focus on data engineering.</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2021 — 2025</span>
+                <h3>B.S. Computer Science</h3>
+                <p>Indiana University</p>
+                <p class="timeline-desc">Focus on software engineering with minors in data science and criminal justice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TAB: EXPERIENCE ===== -->
+      <section id="tab-experience" class="tab-content">
+        <div class="section-title">
+          <h2>Experience</h2>
+          <span class="section-count">3 entries</span>
+        </div>
+
+        <div class="experience-list">
+          <article class="exp-card">
+            <div class="exp-header">
+              <div class="exp-company">
+                <span class="exp-name">Indiana University</span>
+              </div>
+              <span class="exp-role">Research Intern</span>
+              <span class="exp-date">May 2026 — July 2026</span>
+            </div>
+            <ul class="exp-details">
+              <li>Study the effects of AI agent harness systems on token usage in LLM systems</li>
+              <li>Working with agent harnesses like GenericAgent, OpenClaw, and ClaudeCode, Codex, and HermesAgent</li>
+              <li>Used benchmarks from WildClawBench as well as other tool and mixed usage benchmarks to accurately measure token usage in realistic environments</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">Python</span>
+              <span class="exp-tag">PyTorch</span>
+              <span class="exp-tag">Kubernetes</span>
+              <span class="exp-tag">AWS</span>
+            </div>
+          </article>
+
+          <article class="exp-card">
+            <div class="exp-header">
+              <div class="exp-company">
+                <span class="exp-name">St. Andrew's Episcopal School</span>
+              </div>
+              <span class="exp-role">IT Consultant</span>
+              <span class="exp-date">Sep 2025 - Apr 2026</span>
+            </div>
+            <ul class="exp-details">
+              <li>Audit systems and data collections to ensure accuracy, consistency, and compliance with organization standards</li>
+              <li>Identified and resolved data discrepancies to maintain integrity and reliability across platforms</li>
+              <li>Updated and maintained records to ensure accurate reporting and efficient operations</li>
+              <li>Managed user administration, including student onboarding and ensuring users have correct permissions across different systems</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">Google Apps Script</span>
+              <span class="exp-tag">Google Workspace</span>
+              <span class="exp-tag">Google Admin</span>
+              <span class="exp-tag">GoGuardian</span>
+              <span class="exp-tag">Python</span>
+            </div>
+          </article>
+
+          <article class="exp-card">
+            <div class="exp-header">
+              <div class="exp-company">
+                <span class="exp-name">Indiana University</span>
+              </div>
+              <span class="exp-role">Undergraduate Research Assistant</span>
+              <span class="exp-date">May 2023 — Feb 2024</span>
+            </div>
+            <ul class="exp-details">
+                <li>Collaborated with the research team to collect, label, and analyze social media data from police departmentsaround the United States</li>
+                <li>Classified and organized thousands of tweets to identify communication patterns related to police response to homelessness</li>
+                <li>Introduced workflow improvements that increased collaboration efficiency to reduce redundant meeting time</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">Microsoft Excel</span>
+              <span class="exp-tag">Collaboration</span>
+              <span class="exp-tag">Meeting Coordination</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== TAB: PROJECTS ===== -->
+      <section id="tab-projects" class="tab-content">
+        <div class="section-title">
+          <h2>Projects</h2>
+          <span class="section-count">4 Projects</span>
+        </div>
+
+        <div class="projects-grid">
+          <!-- <article class="project-card">
+            <div class="project-preview">
+              <div class="project-placeholder">
+                <span class="placeholder-icon">⬡</span>
+                <span class="placeholder-text">preview</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title"></h3>
+              <p class="project-desc"></p>
+              <div class="project-meta">
+                <span class="project-lang"></span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">[source]</a>
+                <a href="#" class="project-link">[demo]</a>
+              </div>
+            </div>
+          </article> -->
+
+          <article class="project-card">
+            <div class="project-preview">
+              <div class="project-placeholder">
+                <span class="placeholder-icon">◈</span>
+                <span class="placeholder-text">preview</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Portfolio Dashboard</h3>
+              <p class="project-desc">Minimalist portfolio dashboard with responsive design and smooth animations</p>
+              <div class="project-meta">
+                <span class="project-lang">TypeScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">[source]</a>
+                <a href="#" class="project-link">[live]</a>
+              </div>
+            </div>
+          </article>
+
+        <article class="project-card">
+            <div class="project-preview">
+              <div class="project-placeholder">
+                <span class="placeholder-icon">⬡</span>
+                <span class="placeholder-text">preview</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Rental Management System</h3>
+              <p class="project-desc">Collaborated with a group practicing Agile methodology for a simulated customer to develop a rental management system for property and vehicle listings</p>
+              <div class="project-meta">
+                <span class="project-lang">Python, Django</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">[source]</a>
+                <a href="#" class="project-link">[demo]</a>
+              </div>
+            </div>
+          </article>
+
+        <article class="project-card">
+            <div class="project-preview">
+              <div class="project-placeholder">
+                <span class="placeholder-icon">⬡</span>
+                <span class="placeholder-text">preview</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Toy Operating System</h3>
+              <p class="project-desc">A toy operating system used to understand the basis of mainstream operating systems like task scheduling, memory allocation, file creation, and other core functionalities</p>
+              <div class="project-meta">
+                <span class="project-lang">C</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">[source]</a>
+                <a href="#" class="project-link">[demo]</a>
+              </div>
+            </div>
+        </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <div class="project-placeholder">
+                <span class="placeholder-icon">◈</span>
+                <span class="placeholder-text">preview</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Discord Helper Bot</h3>
+              <p class="project-desc">Discord server bot to help query an API for video game information as well as various miscellaneous features to enhance the Discord gaming experience</p>
+              <div class="project-meta">
+                <span class="project-lang">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">[source]</a>
+                <a href="#" class="project-link">[live]</a>
+              </div>
+            </div>
+          </article>
+        
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
