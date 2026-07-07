@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroTitle = document.getElementById('heroTitle');
   const heroSubtitle = document.getElementById('heroSubtitle');
   if (heroTitle) heroTitle.textContent = 'Luke Van Jelgerhuis';
-  if (heroSubtitle) heroSubtitle.textContent = 'Software Engineer & Full-Stack Developer';
+  if (heroSubtitle) heroSubtitle.textContent = 'Machine Learning Engineer in training, passionate about AI and data science.';
 
   // ==========================================
   // 4. SCROLL REVEAL
